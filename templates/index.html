@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load account %}
+{% block content %}
+{% user_display user%}
+<h1>Hello Everyone!</h1>
+<h3>I'm BoilerPlate Text</h3>
+<p class='display-5'>{{user}}...is Logged in</p>
+{% for social in data %}
+<p>Social {{social.extra_data.email}}</p>
+{% endfor %}
+<!-- <div class="output"></div> -->
+{% endblock %}
